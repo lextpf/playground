@@ -1,0 +1,13 @@
+id,name,city,age,salary,department
+1,Alice,Berlin,29,52000,Engineering
+2,Bob,Munich,34,61000,Engineering
+3,Carol,Hamburg,41,72000,Management
+4,Dave,Berlin,,48000,Sales
+5,Eve,Cologne,38,67000,Management
+6,Frank,Munich,26,45000,Sales
+7,Grace,Hamburg,45,81000,Engineering
+8,Heidi,Berlin,31,,Marketing
+9,Ivan,Cologne,52,90000,Management
+10,Judy,Munich,28,50000,Marketing
+11,Mallory,Berlin,36,58000,Sales
+12,Niaj,Hamburg,,53000,Marketing
