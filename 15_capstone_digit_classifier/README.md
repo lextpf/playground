@@ -1,9 +1,9 @@
 # Capstone: Handwritten Digit Classifier (PyTorch)
 
-My January capstone. A small but complete PyTorch project that classifies 8x8
-handwritten digits using a tiny convolutional neural network. It's split into
-focused modules the way a "real" mini-project would be, so I can reuse the data
-and model code from both training and evaluation.
+My capstone project. A small but complete PyTorch project that classifies 8x8
+handwritten digits with a tiny convolutional neural network. It's split into
+focused modules like a real mini-project, so the data and model code are
+reusable from both training and evaluation.
 
 ## What it does
 
@@ -17,7 +17,7 @@ and model code from both training and evaluation.
 
 ## Dataset
 
-The `sklearn.datasets.load_digits` set ships *inside* scikit-learn, so it loads
+`sklearn.datasets.load_digits` ships *inside* scikit-learn, so it loads
 instantly and works fully offline. Each sample is an 8x8 grayscale image of a
 handwritten digit (0-9), flattened to 64 features.
 
@@ -49,17 +49,16 @@ python evaluate.py              # after training, prints test metrics
 
 The digits set is small and clean, so the CNN trains quickly on CPU. With the
 defaults I see **train accuracy near ~99%** and **test accuracy around 96-98%**.
-Exact numbers vary slightly, but with the seeds pinned a given config is
+Numbers vary slightly run to run, but with the seeds pinned a given config is
 reproducible.
 
 ## Reflection
 
-This capstone pulls together the whole January journey. I started the month with
-plain Python and numpy fundamentals, moved through loading and preprocessing
-data with scikit-learn (train/test splits, `StandardScaler`, metrics), then
-learned PyTorch piece by piece, tensors, `nn.Module`, autograd, optimizers,
-and the `DataLoader` pipeline. Here all of those threads come together: a clean
-data module, an importable model, a real training loop with reproducible seeds,
-and a proper evaluation step that goes beyond a single accuracy number. Splitting
-it across files instead of one big script is the habit I most wanted to build,
-and it finally feels natural. Good place to end the month.
+This one pulls all the threads together. I started with plain Python and numpy,
+moved through scikit-learn for loading and preprocessing (train/test splits,
+`StandardScaler`, metrics), then picked up PyTorch piece by piece: tensors,
+`nn.Module`, autograd, optimizers, the `DataLoader` pipeline. All of those
+threads meet here: a clean data module, an importable model, a real training
+loop with pinned seeds, and an evaluation step that goes beyond a single
+accuracy number. Splitting it across files instead of one big script is the
+habit I most wanted to build, and it finally feels natural. Good place to stop.
